@@ -3,6 +3,10 @@ Timer = require('./timer')
 CommentBox = require('./CommentBox')
 CommentList = require('./CommentList')
 CommentForm = require('./CommentForm')
+
+# test file
+kwlList = require('./kwlList.coffee')
+
 data = require('./data')
 
 React.render(

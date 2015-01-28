@@ -1,0 +1,10 @@
+KWL-App (app type)
+	-K list (list type)
+		-name
+		-items
+	-W list (list type)
+		-name
+		-items
+	-L list (list type)
+		-name
+		-items
