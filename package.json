@@ -1,0 +1,31 @@
+{
+  "name": "We-kwl",
+  "version": "1.0.0",
+  "description": "Collaborative kwl app for education",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(none)"
+  },
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "broccoli": "*",
+    "broccoli-browserify": "*",
+    "broccoli-coffee": "*",
+    "broccoli-merge-trees": "*",
+    "broccoli-sass": "*",
+    "broccoli-static-compiler": "*",
+    "react": "^0.12.2"
+  },
+  "keywords": [
+    "kwl",
+    "collabrify",
+    "Soloway",
+    "Deep"
+  ],
+  "author": "Tyler Markvluwer",
+  "license": "ISC"
+}
