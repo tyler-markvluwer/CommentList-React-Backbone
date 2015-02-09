@@ -4,8 +4,7 @@ ListView = require('./listView')
 
 # test file
 KwlList = require('./kwlList')
-
-data = require('./data')
+Client = require('./collabrify_client')
 
 doAction: ->
 	title = document.getElementById('title-input').value

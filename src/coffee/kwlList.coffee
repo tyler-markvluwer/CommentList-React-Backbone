@@ -23,13 +23,11 @@ class KwlList extends EventEmitter
 	deleteItemByTitle: (title) ->
 		#console.log item for item in @items when item.title is title
 		@items = @items.filter (item) -> item.title isnt title
-		console.log("items")
-		console.log(@items)
 		@emit 'change'
 
+	# find item and overwrite old title with the new title
 	editItem: (oldTitle, newTitle) ->
 		@updateTitle(item, newTitle) for item in @items when item.title is oldTitle and newTitle
-		# find item and overwrite old title with the new title
 
 	updateTitle: (item, newTitle) ->
 		item.title = newTitle
