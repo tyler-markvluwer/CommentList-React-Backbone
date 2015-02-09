@@ -1,23 +1,37 @@
 React = require('react')
-Timer = require('./timer')
-CommentBox = require('./CommentBox')
-CommentList = require('./CommentList')
-CommentForm = require('./CommentForm')
+Item = require('./item')
+ListView = require('./listView')
 
 # test file
-kwlList = require('./kwlList.coffee')
+KwlList = require('./kwlList')
 
 data = require('./data')
 
+doAction: ->
+	title = document.getElementById('title-input').value
+	console.log(title)
+
+# declare structures
+item1 = new Item("test1", 1)
+item2 = new Item("test2", 2)
+item1.print()
+item2.print()
+
+kList = new KwlList "kList"
+wList = new KwlList "wList"
+
+# test adding items
+kList.addItem(item1)
+kList.addItem(item2)
+wList.addItem(item2)
+
+# Render things to screen
 React.render(
-    Timer
-    	start: 1
-    	end: 4
-    document.getElementById('timer_div')
+	ListView
+		kList: kList
+	document.getElementById('CommentBox-div')
 )
 
-React.render(
-	CommentBox
-		data: data
-	document.getElementById('CommentBox_div')
-)
+window.i = item1
+window.k = kList
+window.w = wList

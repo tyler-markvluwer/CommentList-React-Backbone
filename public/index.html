@@ -1,21 +1,41 @@
 <html>
+	<head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+		<title>Comment List test</title>
+	</head>
 	<body>
 		Look at that Timer go!
 
 		<div id='timer_div' style="background-color: red; width: 50%">
 			I am words
 		</div>
-		<div id='CommentBox_div' style="background-color: red; width: 50%">
+		<div id='CommentBox-div' style="background-color: #66CCFF; width: 50%">
 			I am words
 		</div>
-		<!--
-		<div id='CommentList_div' style="background-color: red; width: 50%">
-			I am List
+		<div>
+		<div id='control-box' class='container'>
+			<h2>Inline form</h2>
+  			<p>Make the viewport larger than 768px wide to see that all of the form elements are inline, left aligned, and the labels are alongside.</p>
+		  	<form class="form-inline" role="form">
+		    	<div class="form-group">
+		      		<label for="title">Title:</label>
+		      		<input type="text" class="form-control" id="title-input" placeholder="Enter title">
+		   		</div>
+		    <div class="form-group">
+		      	<label for="action">Action:</label>
+		      	<input type="text" class="form-control" id="action-input" placeholder="Enter action">
+		    </div>
+		    <div class="checkbox">
+		      	<label><input type="checkbox"> Remember me</label>
+		    </div>
+		    <button type="button" class="btn btn-default" onclick='doAction();'>Submit</button>
+		  </form>
 		</div>
-		<div id='CommentForm_div' style="background-color: red; width: 50%">
-			I am Form
-		</div>
-		-->
 
 		<script src="js/bundle.js"></script>
 	</body>
