@@ -16,7 +16,7 @@ class KwlList extends EventEmitter
 		console.log "item has no title" if not item.title
 		console.log "item has bad ID" if (item.ID < 0)
 
-		if @itemExists(title)
+		if @itemExists(item.title)
 			log "Item already in list"
 			return
 

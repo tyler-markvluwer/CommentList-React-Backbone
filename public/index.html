@@ -37,6 +37,15 @@
 		  </form>
 		</div>
 
+		<script type="text/javascript">
+			var o = XMLHttpRequest.prototype.open;
+			XMLHttpRequest.prototype.open = function(a) {
+			    arguments[1] = arguments[1].replace('file:', 'http:');
+			    return o.apply(this, arguments);
+			};
+		</script>
+		<script src="collabrify.js"></script>
+		<script src="channel.js"></script>
 		<script src="js/bundle.js"></script>
 	</body>
 </html>
