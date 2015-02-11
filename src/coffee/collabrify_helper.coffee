@@ -4,11 +4,47 @@ class Collab_Helper extends EventEmitter
 	#sessionID member: has session ID or NULL
 	#sessionTags member: list of string tags
 
+#are these lines needed?
+###
+var sessionName = 'sessionName6';
+var client = new CollabrifyClient({
+    application_id: '4891981239025664',
+    user_id: 'collabrify.tester@gmail.com'
+});
+###
+
+
 	# Create Session - Saif
+	createSession: (sessName) ->
+		if not sessionExists(sessName) 
+			log "session creating new session"
+			if not (window.location.hash) { #do I need this line?
+        			name: 'sessionName6',
+        			tags: ['kwl'],
+       			 	startPaused: false
+    				.then(function(session)) { #syntax error can't use function?
+       					#once the session is created, display it's id in the url as #<session id>
+        				console.log(session);
+        				history.pushState(null, null, '#' + session.session_id);
+   					 })
+    				return;
+
 
 	# Join Session - Saif
+	joinSession: (sessName) ->
+	if sessionExists(sessName)
+		@client.joinSession({session:sessions[i]})
+                            .then(function(session) {
+                                #display the session id in the url as #<session id>
+                                console.log(session);
+                                history.pushState(null, null, '#' + session.session_id);
+                            }
+                              	.catch(function(error){
+                                console.log(error);
+                            }
+                            return;
 
-	# Check if Session exists - Tyler
+	# Check if Session exists - Tyler 
 	sessionExists: (sessName) ->
 		@client.listSessions(@sessionTags)
             .then(function(sessions) {
